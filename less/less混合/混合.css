@@ -1,0 +1,58 @@
+/*
+混合就是将一系列属性 从一个规则集引入到另一个规则集的方式
+1，普通混合
+2，不带输出的混合
+3，带参数的混合
+4，带参数并且有默认值的混合
+5，命名参数
+6，匹配模式
+7，arguments变量
+*/
+/* 1，普通混合（在less编译后，css文件是有输出的该混合的） */
+.center {
+  position: relative;
+  height: 100px;
+  width: 100px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  padding: auto;
+  background-color: aqua;
+}
+/* 2，不带输出的混合 （css文件没有输出该混合） */
+/* 3，带参数的混合 */
+/* 4，带参数并且有默认值的混合 */
+/* 5，命名参数 （命名参数：在传入参数的时候可以指定传入的是哪个参数）（要跟默认值一起使用，如果没有默认值那么就要，传入全部参数）*/
+/* 6，匹配模式  （可以选择对应的混合） （同名混合第一个参数为 @_ 表示每次使用同名混合时都会使用该混合）*/
+/* 7，@arguments变量 （arguments是一个伪数组，储存所有传入的参数）*/
+#big {
+  position: absolute;
+  height: 400px;
+  width: 400px;
+  background-color: green;
+}
+#big #small {
+  position: relative;
+  height: 100px;
+  width: 100px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  padding: auto;
+  background-color: aqua;
+}
+#p {
+  width: 20px;
+  height: 20px;
+  font-size: 15px;
+}
+#div {
+  width: 100px;
+  background-color: #fff;
+  height: 200px;
+  padding: 10px 20px 20px 10px;
+}

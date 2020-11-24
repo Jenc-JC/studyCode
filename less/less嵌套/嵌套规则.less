@@ -1,0 +1,21 @@
+/*
+1，基本嵌套规则
+2，&的使用 
+*/
+@h : 200px;
+@w : 100px;
+@c : pink;
+@fs : 20px;
+div{
+  width: @w;
+  height: @h;
+  p{//基本嵌套规则
+    background-color: @c;
+    h3{
+      color: @c;
+    }
+  }
+  &:hover{//&符
+    font-size: @fs;
+  }
+}

@@ -1,0 +1,30 @@
+/*
+实现：
+    extend(类名 all)
+    all:表示继承类的所有属性，比如类的:hover{}
+
+定义： .类名{}
+
+特点：
+    不能传参，所以灵活性比混合低
+    性能比混合高
+    但灵活性比混合低
+*/
+
+#center{
+    height: 100px;
+    width: 100px;
+    margin: 50px;
+    position: absolute;
+    background-color: yellowgreen;
+}
+
+#first{
+  height: 200px;
+  width: 200px;
+  position: relative;
+  background-color: plum;
+  #second{
+    &:extend(#center);
+  }
+}

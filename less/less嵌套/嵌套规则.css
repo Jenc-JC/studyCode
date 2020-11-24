@@ -1,0 +1,17 @@
+/*
+1，基本嵌套规则
+2，&的使用 
+*/
+div {
+  width: 100px;
+  height: 200px;
+}
+div p {
+  background-color: pink;
+}
+div p h3 {
+  color: pink;
+}
+div:hover {
+  font-size: 20px;
+}

@@ -1,0 +1,19 @@
+/*
+使用@声明变量  @box : 100px; 
+1，作为普通属性值，直接使用@box
+2，作为选择器和属性名，@{ box } 的形式使用
+3，作为URL，@{url}
+4，变量的延迟加载 
+*/
+#box {
+  height: 100px;
+  width: 100px;
+  background-color: yellow;
+}
+/* 变量的延迟加载 */
+.p {
+  height: 12px;
+}
+.p span {
+  height: 230px;
+}

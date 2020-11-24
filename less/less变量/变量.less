@@ -1,0 +1,35 @@
+
+/*
+使用@声明变量  @box : 100px; 
+1，作为普通属性值，直接使用@box
+2，作为选择器和属性名，@{ box } 的形式使用
+3，作为URL，@{url}
+4，变量的延迟加载 
+*/
+
+
+@color : yellow;
+@w : 100px;
+@h : 100px;
+@constructor : #box;//作为选择器
+@gao : height;//作为属性名
+
+
+@{constructor}{
+  @{gao}: @h;
+  width: @w;
+  background-color: @color;
+
+}
+
+/* 变量的延迟加载 */
+@num : 10;
+.p{
+  @num : 12;
+  span{
+    @num : 8;
+    height: @num+0px;//230px  因延迟加载所以num=230
+    @num : 230;
+  }
+  height: @num+0px;//12px 因为作用域的原因num=12
+}
